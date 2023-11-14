@@ -1,0 +1,72 @@
+/* Var */
+:root {
+    --index: calc(1vh + 1vw);
+    /* Color */
+    --blue: #006BFF;
+    --gray: #1E1E1E;
+    --gray-gradient-1: linear-gradient(83deg, #0A0A0A 0%, #1A1A1A 48.33%, #0D0D0D 100%);
+    --gray-gradient-2: linear-gradient(83deg, #0D0D0D 0%, #1F1F1F 36.35%, #0D0D0D 68.75%, #1A1A1A 100%);
+    --gray-stoke: #353535;
+    --gray-text: #808080;
+    --green: #00AB1C;
+    --red: #B20000;
+    --yellow: #FF9500;
+}
+
+
+
+
+/* Text */
+html {
+    color: white;
+    font-size: 10px;
+    font-weight: 500; /* Medium */
+}
+
+h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600; /* SemiBold */
+}
+
+h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700; /* Bold */
+}
+
+p {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500; /* Medium */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600; /* SemiBold */
+}
+
+
+
+
+/* Block */
+body {
+    background-color: #000;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1.087);
+    border: 0.5px var(--gray-stoke) solid;
+    padding: calc(var(--index) * 1.087) calc(var(--index) * 2.17);
+    border-radius: calc(var(--index) * 0.65);
+}
+
+.back-1 {background: var(--gray-gradient-1);}
+.back-2 {background: var(--gray-gradient-2);}
+
+.flex-center {align-items: center;}
+.flex-start {align-items: start;}
