@@ -10,7 +10,7 @@ export default function Info() {
                 <div className="row">
                     <div className="col-2 col-md-3"></div>
                     <div className="col-8 col-md-6">
-                        <div className="block back-1 flex-start gap-0 margin-10">
+                        <div className="block back-1 flex-a-start gap-0 margin-10">
                             <h3>StudyHub BSTU</h3>
                             <p>Мы создали сервис для обмена заданиями между студентами БГТУ. Это простой и удобный способ помочь друг другу</p>
                             <Link href="/" className="button but-blue link margin-10">Начать</Link>
@@ -24,7 +24,7 @@ export default function Info() {
                 <div className="row">
                     <div className="col-2 col-md-3"></div>
                     <div className="col-8 col-md-6">
-                        <div className="block back-1 flex-start gap-0 margin-10">
+                        <div className="block back-1 flex-a-start gap-0 margin-10">
                             <h3>Информация</h3>
                             <p>Наши условия просты: вы загружаете свои задания на сайт и получаете выполненные работы других студентов взамен</p>
                             <Link href="/search-info" className="button but-green link margin-10">Подробнее</Link>
@@ -38,7 +38,7 @@ export default function Info() {
                 <div className="row">
                     <div className="col-2 col-md-3"></div>
                     <div className="col-8 col-md-6">
-                        <div className="block back-1 flex-start gap-0 margin-10">
+                        <div className="block back-1 flex-a-start gap-0 margin-10">
                             <h3>Развитие</h3>
                             <p>Мы собираемся продолжать развивать проект, и ваша поддержка очень важна для нас. Если сайт будет пользоваться спросом, мы будем работать над новыми обновлениями</p>
                             <Link href="/news" className="button but-blue link margin-10">Новости</Link>

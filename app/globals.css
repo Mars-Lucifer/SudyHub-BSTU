@@ -16,6 +16,7 @@
 }
 .white {color: white;}
 .gray {color: var(--gray-text);}
+.yellow {color: var(--yellow);}
 
 .border-right-gray {
     border-right: 0.5px var(--gray-stoke) solid;
@@ -130,10 +131,10 @@ body {
 
 .flex {display: flex;}
 .flex-column {flex-direction: column;}
-.flex-center {align-items: center;}
-.flex-start {align-items: start;}
-.flex-between {justify-content: space-between;}
-.flex-align-center {align-items: center;}
+.flex-a-center {align-items: center;}
+.flex-a-start {align-items: start;}
+.flex-j-between {justify-content: space-between;}
+.flex-j-center {justify-content: center;}
 
 
 
@@ -149,4 +150,12 @@ body {
 
 .padding-tb-5 {
     padding: calc(var(--index) * 0.54) 0;
+}
+
+
+
+
+/* More */
+.img {
+    width: 100%;
 }

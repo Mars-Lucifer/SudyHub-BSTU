@@ -5,7 +5,7 @@ export default function Header() {
     <section className="container margin-10">
       <div className="row">
         <div className="col-12">
-            <div className="flex flex-between flex-align-center">
+            <div className="flex flex-j-between flex-a-center">
                 <Link href="/" className="link gray">Главная</Link>
                 <Link href="/info" className="link gray">Инфомрация</Link>
                 <Link href="/news" className="link gray">Новости</Link>
