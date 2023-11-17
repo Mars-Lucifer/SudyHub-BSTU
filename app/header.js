@@ -9,7 +9,7 @@ export default function Header() {
                 <Link href="/" className="link gray">Главная</Link>
                 <Link href="/info" className="link gray">Инфомрация</Link>
                 <Link href="/news" className="link gray">Новости</Link>
-                <Link href="/create" className="button but-blue link">Создать запись</Link>
+                <Link href="/page/new" className="button but-blue link">Создать запись</Link>
             </div>
         </div>
       </div>
