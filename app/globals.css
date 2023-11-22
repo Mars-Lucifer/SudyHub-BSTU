@@ -33,6 +33,10 @@ html {
     font-weight: 500; /* Medium */
 }
 
+h1, h5, h6 {
+    color: white;
+}
+
 h2 {
     color: white;
     font-size: 1.6rem;
@@ -118,7 +122,7 @@ p {
 
 /* Block */
 body {
-    background-color: #000;
+    background-color: #000 !important;
 }
 
 .block {
@@ -192,4 +196,8 @@ body {
     border: 0.5px var(--gray-stoke) solid;
     outline: none;
     border-radius: calc(var(--index) * 0.65);
+}
+
+.next-error-h1 {
+    border-right: 1px solid white !important;
 }

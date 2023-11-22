@@ -1,46 +1,16 @@
-'use client'
-
 import Link from "next/link"
 import Header from "./header"
 import Footer from "./footer"
-import React, { useEffect } from 'react';
+import FastButton from "./fastbutton";
 
-function ClickButton(event) {
-  const button = event.target;
-  const inputField = document.getElementById('input-tags');
-
-  if (button.classList.contains('but-gray')) {
-    if (inputField.value.length > 0) {
-      inputField.value += ', ' + button.value;
-    }
-    else {
-      inputField.value = button.value;
-    }
-    button.classList.remove('but-gray');
-    button.classList.add('but-green');
-  }
-  else {
-    if (inputField.value.includes(', ' + button.value)) {
-      inputField.value = inputField.value.replace(', ' + button.value, '');
-    }
-    if (inputField.value.includes(button.value + ', ')) {
-      inputField.value = inputField.value.replace(button.value + ', ', '');
-    }
-    else {
-      inputField.value = inputField.value.replace(button.value, '');
-    }
-    button.classList.remove('but-green');
-    button.classList.add('but-gray');
-  }
+async function fetchData() {
+  const res = await fetch('https:/jsonplaceholder.typicode.com/posts');
+  const result = await res.json();
+  return result;
 }
 
-export default function Home() {
-  useEffect(() => {
-    const buttons = document.getElementsByClassName('fast-tag');
-    Array.from(buttons).forEach(button => {
-      button.addEventListener('click', ClickButton);
-    });
-  }, []);
+export default async function Home() {
+  const res = await fetchData();
 
   return (
     <div>
@@ -57,13 +27,7 @@ export default function Home() {
               </div>
               <input className="gray input" placeholder="Введите название записи"/>
               <input className="gray input" placeholder="Введите теги" id="input-tags"/>
-              <div className="flex flex-a-center flex-j-center flex-grid gap-10 flex-wrap">
-                <p className="margin-0">Быстрые теги:</p>
-                <button className="button but-gray link-mini fast-tag" value="Колледж">Колледж</button>
-                <button className="button but-gray link-mini fast-tag" value="ОАиП">ОАиП</button>
-                <button className="button but-gray link-mini fast-tag" value="Математика">Математика</button>
-                <button className="button but-gray link-mini fast-tag" value="ОСС">ОСС</button>
-              </div>
+              <FastButton></FastButton>
               <input className="button but-blue" type="submit" value="Искать запись"/>
             </div>
           </div>
@@ -77,7 +41,7 @@ export default function Home() {
           <div className="col-12 col-md-8">
             <div className="flex flex-column gap-10">
               <div className="block back-2 gap-5">
-                <h3 className="margin-0">Название записи</h3>
+                <h3 className="margin-0">Title</h3>
                 <p className="gray margin-0">Краткое описание записи</p>
                 <p className="white margin-0">Автор: Автор</p>
                 <p className="gray margin-0">Автор: Автор</p>
